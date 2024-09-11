@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/main.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color:#3C3C3C">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Game Store</a>
+
+          <div class="menu-plateformes">
+            <a href="/pc">PC</a>
+            <a href="/playstation">Playstation</a>
+            <a href="/xbox">Xbox</a>
+            <a href="/nintendo">Nintendo</a>
+          </div>
+
+          <div>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="/panier">
+                  <i class="bi bi-cart4 h3" style="color:white"></i>
+                </a>
+              </li>
+
+              <li class="nav-item dropdown button-menu">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                <i class="bi bi-person h3" style="color:#FF5815"></i>
+                </a>
+                <ul class ="menu-drop">
+                  <li><a class="dropdown-item" data-show="connected" href="/account">Mon espace</a></li>
+                  <li><a class="dropdown-item" data-show="disconnected" href="/signin">Connexion</a></li>
+                  <li><button class="dropdown-item" data-show="connected" id="signout-btn">Déconnexion</button></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-page">
+          <!-- Le contenu de la page sera injecté ici -->
+    </main>
+
+    <footer class="bg-black text-white text-center footer">
+      <div class="row">
+          <div class="col-12 col-lg-6">
+              <h3 class="text-primary">Nos réseaux</h3>
+              <p>Instagram : game_store <br/>
+                Facebook : Game Store Officiel <br/>
+                Youtube : Game Store <br/>
+              </p>
+          </div>
+          <div class="col-12 col-lg-6">
+              <h3 class="text-primary">Nous contacter</h3>
+              <p>gamestore@mail.com</p>
+          </div>
+      </div>
+  </footer>
+    <script src="js/script.js"></script>
+    <script type="module" src="/Router/router.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

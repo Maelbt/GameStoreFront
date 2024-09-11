@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-6 signin-form">
+      <h4>S'inscrire</h4></br>
+    <form id="formulaireInscription">
+        <div class="mb-3">
+            <label for="NomInput" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom">
+            <div class="invalid-feedback">
+                Le nom est requis.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="PrenomInput" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" name="Prenom">
+            <div class="invalid-feedback">
+                Le prénom est requis.
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="EmailInput" class="form-label">Email</label>
+          <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="Email">
+          <div class="invalid-feedback">
+            Le mail n'est pas au bon format.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="PasswordInput" class="form-label">Mot de passe</label>
+          <input type="password" class="form-control" id="PasswordInput" name="mdp">
+          <div class="invalid-feedback">
+            Le mot de passe n'est pas assez fort : au moins 8 caractères, comprenant au moins une lettre majuscule, une minuscule, un chiffre et un caractère spécial.
+          </div>
+          <div class="valid-feedback">
+            Le mot de passe est valide.
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="ValidatePasswordInput" class="form-label">Confirmez votre mot de passe</label>
+            <input type="password" class="form-control" id="ValidatePasswordInput" name="PasswordConfirm">
+            <div class="invalid-feedback">
+                La confirmation n'est pas identique au mot de passe.
+            </div>
+          </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" id="btn-validation-inscription">Inscription</button>
+        </div>
+    </form>
+    <div class="text-center pt-3">
+        <a href="/signin">Vous avez déjà un compte ? Connectez-vous ici !</a>
+    </div>
+</div>
+<div class="d-none d-lg-block col-12 col-lg-6 photo-signin">
+  <img src="../images/halo-infinite-vertical.jpg">
+</div>
+</div>
+</div>

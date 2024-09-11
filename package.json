@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "icons": "^1.0.0"
+  },
+  "name": "ecf-studi",
+  "version": "1.0.0",
+  "description": "Ce site est le projet à rendre dans le cadre de l'ECF du programme Graduate Developpeur Web Gaming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,254 @@
+
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+@import 'custom';
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+main{
+    margin-bottom: 250px;
+    background-color: #272727;
+}
+
+footer.footer{
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+p{
+    font-family: $font-family-serif;
+    font-size: 18px;
+}
+
+h4{
+    color: white;
+    font-family: $font-family-serif;
+}
+
+.hero-scene{
+    position: relative;
+    margin-bottom:15px;
+    background-image: url(../images/FondHeroScene.jpg);
+    background-size: cover;
+    filter: brightness(0.8);
+    background-position: center;
+    height: 200px;
+    width:100%;
+    /*&::before{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-position: center;
+    }*/
+
+    *{
+        //Positionner les éléments devant le ::before
+        position:relative;
+    }
+
+    .hero-scene-content{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.price-card{
+    background-color: #FF5815;
+    position: absolute;
+    padding: 0 8px;
+    font-size: 16px;
+    bottom: 0px;
+    right:16px;
+    border-radius: 5px;
+}
+
+.menu-plateformes{
+    a{
+        padding: 8px;
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        color:#FF5815;
+    }
+}
+
+.signin-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height:70vh;
+    align-items: center;
+}
+
+.signin-form form input{
+    max-width: 700px;
+    min-width: 200px;
+    height: 100%;
+}
+
+.photo-signin{
+    position:relative;
+    height:50%;
+    width:50%;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.photo-signin img{
+    object-position: 50% 50%;
+}
+
+.achats{
+    padding:110px;
+    width:100%;
+    height: 350px;
+    background-color : #3C3C3C;
+    border-radius: 10px;
+    margin-bottom: 500px;
+    text-align: center;
+    color:white;
+    p{
+        font-size: 15px;
+        color:#9e9e9e;
+    }
+}
+
+.resume{
+    padding: 30px;
+    width:100%;
+    height: 300px;
+    background-color : #101010;
+    border-radius: 10px;
+    p{
+        color:#9e9e9e;
+        font-size: 16px;
+        margin:1px;
+    }
+    h4{
+        margin-top:8px;
+        font-size: 16px;
+    }
+    .resume-button{
+        text-align: center;
+    }
+}
+
+.panier{
+    padding:50px;
+}
+
+.panier-resume{
+    padding-top:50px;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+//On affiche le titre de l'image en passant dessus
+.image-card{
+    position:relative; //Permet au titre d'être centré sur l'image et pas sur tout l'espace
+    &:hover{
+        .titre-image,
+        .action-image-buttons{
+            opacity: 1;
+        }
+        img{
+            filter: brightness(0.3);
+        }
+    }
+
+    img{
+        transition: all 0.3s;
+    }
+
+    .titre-image{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%); //On ajuste la position du titre
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    .action-image-buttons{
+        position : absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+}
+
+.form-label{
+    color: $primary;
+}
+
+.dropdown-menu{
+    position:absolute;
+    right:100px;
+}
+
+.button-menu{
+    position:relative;
+}
+
+.menu-drop{
+    position:absolute;
+    display: none;
+    left: -50px;
+    z-index:1000;
+    background-color: #272727;
+    color: white;
+    list-style-type: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu-drop li:hover{
+    color:#FF5815;
+}
+
+.button-menu:hover .menu-drop{
+    display:block;
+}
+
+.navbar-nav{
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-item{
+    padding: 0 8px;
+}
+
+@media screen and (min-width: 720px) and (max-width: 2560px) { 
+    .hero-scene{
+        background-position: top;
+        height: 600px;
+    }
+    .nav-item{
+        padding: 0;
+    }
+    .price-card{
+        font-size: 22px;
+    }
+}

@@ -2,6 +2,9 @@
 
 const inputNom = document.getElementById("NomInput");
 const inputPreNom = document.getElementById("PrenomInput");
+const inputAdresse = document.getElementById("AdresseInput");
+const inputCodePostal = document.getElementById("CodePostalInput");
+const inputVille = document.getElementById("VilleInput");
 const inputMail = document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
 const inputValidationPassword = document.getElementById("ValidatePasswordInput");
@@ -10,6 +13,9 @@ const formInscription = document.getElementById("formulaireInscription");
 
 inputNom.addEventListener("keyup", validateForm); 
 inputPreNom.addEventListener("keyup", validateForm);
+inputAdresse.addEventListener("keyup", validateForm);
+inputCodePostal.addEventListener("keyup", validateForm);
+inputVille.addEventListener("keyup", validateForm);
 inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidationPassword.addEventListener("keyup", validateForm);
@@ -20,11 +26,14 @@ btnValidation.addEventListener("click", InscrireUtilisateur);
 function validateForm(){
     const nomOk = validateRequired(inputNom);
     const prenomOk = validateRequired(inputPreNom);
+    const adresseOk = validateRequired(inputAdresse);
+    const codePostalOk = validateCodePostal(inputCodePostal);
+    const villeOk = validateRequired(inputVille);
     const mailOk = validateMail(inputMail);
     const passwordOk = validatePassword(inputPassword);
     const passwordConfirmOk = validateConfirmationPassword(inputPassword, inputValidationPassword);
 
-    if(nomOk && prenomOk && mailOk && passwordOk && passwordConfirmOk){
+    if(nomOk && prenomOk && adresseOk && codePostalOk && villeOk && mailOk && passwordOk && passwordConfirmOk){
         btnValidation.disabled = false;
     }
     else{
@@ -46,6 +55,22 @@ function validateMail(input){
         input.classList.add("is-invalid");
         return false;
     }
+}
+
+function validateCodePostal(input){
+    const codePostalRegex = /^\d{5}$/;
+    const codePostalUser = input.value;
+    if(codePostalUser.match(codePostalRegex)){
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid"); 
+        return true;
+    }
+    else{
+        input.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        return false;
+    }
+    
 }
 
 function validatePassword(input){
@@ -100,6 +125,9 @@ function InscrireUtilisateur(){
     let raw = JSON.stringify({
       "firstName": dataForm.get("Prenom"),
       "lastName": dataForm.get("Nom"),
+      "adresse": dataForm.get("Adresse"),
+      "codepostal": dataForm.get("CodePostal"),
+      "ville": dataForm.get("Ville"),
       "email": dataForm.get("Email"),
       "password": dataForm.get("mdp")
     });

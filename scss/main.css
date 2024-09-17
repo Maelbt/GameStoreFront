@@ -11973,6 +11973,7 @@ html {
 
 main {
   margin-bottom: 250px;
+  min-height: 1000px;
   background-color: #272727;
 }
 
@@ -11991,6 +11992,26 @@ p {
 h4, .h4 {
   color: white;
   font-family: "Hind Madurai", serif;
+}
+
+.description {
+  font-size: 16px;
+}
+.description h2, .description .h2 {
+  font-size: 24px;
+}
+.description h3, .description .h3 {
+  font-size: 20px;
+}
+.description p {
+  font-size: 16px;
+}
+
+#formulaireInscription {
+  max-width: 300px;
+}
+#formulaireInscription input {
+  width: 300px;
 }
 
 .hero-scene {
@@ -12033,20 +12054,106 @@ h4, .h4 {
   border-radius: 5px;
 }
 
+.promotion-card {
+  background-color: #00861d;
+  position: absolute;
+  padding: 0 8px;
+  font-size: 16px;
+  bottom: 0px;
+  left: 16px;
+  border-radius: 5px;
+}
+
+.buy-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#gamePicture {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+
+#gameName {
+  margin-top: 10px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  gap: 15px; /* Espace entre les éléments */
+  margin-bottom: 10px;
+}
+
+#gamePrice {
+  font-size: 1rem;
+  margin: 0;
+}
+
+#gamePromotion {
+  display: none;
+  font-size: 1rem;
+  color: #FF5815;
+  margin: 0;
+}
+
+#gameFinalPrice {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#addToCart {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #FF5815;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addToCart:hover {
+  background-color: rgba(255, 87, 21, 0.8431372549);
+}
+
+.menu-plateformes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .menu-plateformes a {
   padding: 8px;
   text-decoration: none;
   color: white;
 }
-.menu-plateformes a:hover {
+.menu-plateformes .link-plateforme:hover {
   color: #FF5815;
+}
+
+.btn-search {
+  height: 45px;
+  width: 45px;
+  border-radius: 45px;
+  background-color: #FF5815;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.btn-search:hover {
+  height: 50px;
+  width: 50px;
 }
 
 .signin-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh;
+  margin-top: 15px;
   align-items: center;
 }
 
@@ -12121,6 +12228,8 @@ h4, .h4 {
 
 .image-card {
   position: relative;
+  height: auto;
+  overflow: hidden;
 }
 .image-card:hover .titre-image,
 .image-card:hover .action-image-buttons {
@@ -12131,6 +12240,11 @@ h4, .h4 {
 }
 .image-card img {
   transition: all 0.3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 .image-card .titre-image {
   position: absolute;
@@ -12185,6 +12299,10 @@ h4, .h4 {
   display: block;
 }
 
+.navbar {
+  max-height: 77px;
+}
+
 .navbar-nav {
   flex-direction: row;
   align-items: center;
@@ -12203,6 +12321,9 @@ h4, .h4 {
     padding: 0;
   }
   .price-card {
+    font-size: 22px;
+  }
+  .promotion-card {
     font-size: 22px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,123 +1,14 @@
+<article class="bg-dark text-white text-center">
+  <div class="container py-5">
+      <h2>Nintendo</h2>
+  </div>
+</article>
 <article class="bg-dark text-white">
-    <div class="container p-4 text-center">
-        <h1>Nintendo</h1>
-    </div>
-  </article>
-  <!--Nintendo-->
-  <article class="bg-dark text-white">
-    <div class="container col">
-        <div class="text-center" data-show="admin">
-            <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter un jeu</button>
-        </div>  
-    
-      <div class="row row-cols-2 row-cols-lg-3" id="allImages">
-  
-        <div class="image-card text-white col p-3">
-          <img src="../images/minecraft.jpg" class="rounded w-100"/>
-          <p class="price-card">29,99€</p>
-          <p class="titre-image">Minecraft</p>
-          <div class="action-image-buttons" data-show="admin">
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-          </div>
-        </div>
-  
-      <div class="image-card text-white col p-3">
-          <img src="../images/no-man-s-sky.jpg" class="rounded w-100"/>
-          <p class="price-card">39,99€</p>
-          <p class="titre-image">No Man's Sky</p>
-          <div class="action-image-buttons" data-show="admin">
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-          </div>
-        </div>
-  
-      <div class="image-card text-white col p-3">
-          <img src="../images/mario-kart-8.jpg" class="rounded w-100"/>
-          <p class="price-card">39,99€</p>
-          <p class="titre-image">Mario Kart 8</p>
-          <div class="action-image-buttons" data-show="admin">
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-          </div>
-        </div>
-          
-        <div class="image-card text-white col p-3">
-            <img src="../images/zelda-totk.jpg" class="rounded w-100"/>
-            <p class="price-card">59,99€</p>
-            <p class="titre-image">The Legend of Zelda : Tears of the Kingdom</p>
-            <div class="action-image-buttons" data-show="admin">
-              <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-              <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-            </div>
-          </div>
+    <div class="container col"> 
 
-        <div class="image-card text-white col p-3">
-            <img src="../images/zelda-eow.jpg" class="rounded w-100"/>
-            <p class="price-card">69,99€</p>
-            <p class="titre-image">The Legend of Zelda : Echoes of Wisdom</p>
-            <div class="action-image-buttons" data-show="admin">
-              <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-              <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-            </div>
-          </div>
-  <!--On peut rajouter davantage d'images-->
+      <div class="row row-cols-2 row-cols-lg-3" id="allGames">
+        <!--Les jeux seront chargés ici par Javascript-->
       </div>
+
     </div>
-  </article>
-  
-  
-  <!-- Modal edition -->
-  <div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition du jeu</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <form>
-                  <div class="mb-3">
-                    <label for="NamePhotoInput" class="form-label">Titre</label>
-                    <input type="text" class="form-control" id="NamePhotoInput" placeholder="Minecraft" name="Titre"> 
-                  </div>
-                  <div class="mb-3">
-                    <label for="PricePhotoInput" class="form-label">Prix</label>
-                    <input type="text" class="form-control" id="PricePhotoInput" placeholder="19,99€" name="Prix"> 
-                  </div>
-                  <div class="mb-3">
-                    <label for="ImageInput" class="form-label">Image</label>
-                    <input type="file" class="form-control" id="ImageInput"  name="Image">
-                  </div>
-                  <div class="text-center">
-                      <button type="button" class="btn btn-primary text-white">Enregistrer</button>
-                  </div>
-              </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Modal suppression -->
-  <div class="modal fade" id="DeletePhotoModal" tabindex="-1" aria-labelledby="DeletePhotoModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Etes-vous sûr de vouloir supprimer ce jeu ?</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <form>
-                  <div class="mb-3">
-                    <p>Monster Hunter Wilds</p>
-                    <img src="../images/FondHeroScene.jpg" class="rounded w-100"/>
-                  </div>
-                  <div class="text-center">
-                      <button type="button" class="btn btn-danger">Supprimer</button>
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                  </div>
-              </form>
-          </div>
-        </div>
-      </div>
-    </div>
+</article>

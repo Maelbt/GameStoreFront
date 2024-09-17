@@ -1,5 +1,8 @@
+<div class="text-white text-center py-5">
+    <h2>Informations personnelles</h2>
+</div>
 <div class="container">
-    <form>
+    <form id="userForm">
         <div class="mb-3">
             <label for="NomInput" class="form-label">Nom</label>
             <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
@@ -8,9 +11,22 @@
             <label for="PrenomInput" class="form-label">Prénom</label>
             <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" name="Prenom"> 
         </div>
+        <div class="mb-3">
+            <label for="AdresseInput" class="form-label">Adresse</label>
+            <input type="text" class="form-control" id="AdresseInput" placeholder="9 rue Charles Boudin" name="Adresse"> 
+        </div>
+        <div class="mb-3">
+            <div class="mb-3">
+            <label for="CodePostalInput" class="form-label">Code Postal</label>
+            <input type="text" class="form-control" id="CodePostalInput" placeholder="33000" name="CodePostal"> 
+        </div>
+        <div class="mb-3">
+            <label for="VilleInput" class="form-label">Ville</label>
+            <input type="text" class="form-control" id="VilleInput" placeholder="Bordeaux" name="Ville"> 
+        </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary text-white">Modifier vos informations</button>
-            <button type="button" class="btn btn-danger">Supprimer mon compte</button>
+            <button type="button" id="deleteAccount" class="btn btn-danger">Supprimer mon compte</button>
         </div>
     </form>
     <div class="text-center pt-3">

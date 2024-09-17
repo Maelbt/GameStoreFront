@@ -1,0 +1,109 @@
+
+<article class="bg-dark text-white text-center">
+  <div class="container py-5">
+      <h2>Collection</h2>
+  </div>
+</article>
+<article class="bg-dark text-white"></article>
+    <div class="container col"> 
+
+      <!-- Formulaire de filtre -->
+      <div class="filter-container mb-4">
+        <form id="filterForm" class="row justify-content-center g-3">
+            <div class="col-md-3">
+                <label for="genreSelect" class="form-label">Genre</label>
+                <select id="genreSelect" class="form-select">
+                    <option value="">Tous les genres</option>
+                    <option value="RPG">RPG</option>
+                    <option value="FPS">FPS</option>
+                    <option value="Stratégie">Stratégie</option>
+                    <option value="Battle Royal">Battle Royal</option>
+                    <option value="4X">4X</option>
+                    <option value="Action">Action</option>
+                    <option value="Aventure">Aventure</option>
+                    <option value="Plates-formes">Plates-formes</option>
+                    <option value="Combat">Combat</option>
+                    <option value="Course">Course</option>
+                    <option value="Survie">Survie</option>
+                    <!-- Options de genre ajoutées dynamiquement -->
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="priceRange" class="form-label">Tranches de prix (€)</label>
+                <select id="priceRange" class="form-select">
+                  <option value="">Tous les prix</option>
+                  <option value="0-20">0-20</option>
+                  <option value="20-40">20-40</option>
+                  <option value="40-60">40-60</option>
+                  <option value="60-80">60-80</option>
+                  <option value="80-100">80-100</option>
+                  <!-- Options de genre ajoutées dynamiquement -->
+              </select>
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+              <button type="submit" class="btn btn-primary text-white">Filtrer</button>
+            </div>
+        </form>
+    </div>
+    
+      <div class="row row-cols-2 row-cols-lg-3" id="allGames">
+        <!--Les jeux seront chargés ici par Javascript-->
+      </div>
+
+    </div>
+</article>
+
+<!-- Modal edition -->
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition du jeu</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="NamePhotoInput" class="form-label">Titre</label>
+                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="Minecraft" name="Titre"> 
+                </div>
+                <div class="mb-3">
+                  <label for="PricePhotoInput" class="form-label">Prix</label>
+                  <input type="text" class="form-control" id="PricePhotoInput" placeholder="19,99€" name="Prix"> 
+                </div>
+                <div class="mb-3">
+                  <label for="ImageInput" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="ImageInput"  name="Image">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary text-white">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal suppression -->
+<div class="modal fade" id="DeletePhotoModal" tabindex="-1" aria-labelledby="DeletePhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Etes-vous sûr de vouloir supprimer ce jeu ?</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <p>Monster Hunter Wilds</p>
+                  <img src="../images/FondHeroScene.jpg" class="rounded w-100"/>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger">Supprimer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>

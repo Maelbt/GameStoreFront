@@ -9,6 +9,7 @@ html{
 
 main{
     margin-bottom: 250px;
+    min-height: 1000px;
     background-color: #272727;
 }
 
@@ -30,11 +31,22 @@ h4{
 }
 
 .description{
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    h1{
+    font-size: 16px;
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
         font-size: 16px;
+    }
+}
+
+#formulaireInscription{
+    max-width: 300px;
+    input{
+        width:300px;
     }
 }
 
@@ -81,22 +93,106 @@ h4{
     border-radius: 5px;
 }
 
+.promotion-card{
+    background-color: #00861d;
+    position: absolute;
+    padding: 0 8px;
+    font-size: 16px;
+    bottom: 0px;
+    left:16px;
+    border-radius: 5px;
+}
+
+.buy-section{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#gamePicture{
+    margin-top: 20px;
+    width:100%;
+    height:auto;
+}
+
+#gameName{
+    margin-top: 10px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    gap: 15px; /* Espace entre les éléments */
+    margin-bottom: 10px;
+}
+
+#gamePrice {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#gamePromotion {
+    display: none;
+    font-size: 1rem;
+    color: #FF5815;
+    margin: 0;
+}
+
+#gameFinalPrice {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#addToCart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FF5815;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addToCart:hover {
+    background-color: #ff5715d7;
+}
+
 .menu-plateformes{
+        display:flex;
+        justify-content: center;
+        align-items: center;
     a{
         padding: 8px;
         text-decoration: none;
         color: white;
     }
-    a:hover{
+    .link-plateforme:hover{
         color:#FF5815;
     }
+}
+
+.btn-search{
+    height: 45px;
+    width: 45px;
+    border-radius: 45px;
+    background-color:#FF5815;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+.btn-search:hover{
+    height: 50px;
+    width: 50px;
 }
 
 .signin-form{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height:70vh;
+    min-height:70vh;
+    margin-top:15px;
     align-items: center;
 }
 
@@ -171,6 +267,8 @@ h4{
 //On affiche le titre de l'image en passant dessus
 .image-card{
     position:relative; //Permet au titre d'être centré sur l'image et pas sur tout l'espace
+    height: auto;
+    overflow: hidden;
     &:hover{
         .titre-image,
         .action-image-buttons{
@@ -183,6 +281,10 @@ h4{
 
     img{
         transition: all 0.3s;
+        object-fit: cover;
+        width: 100%; 
+        height: auto;
+        aspect-ratio: 16/9;
     }
 
     .titre-image{
@@ -240,6 +342,10 @@ h4{
     display:block;
 }
 
+.navbar{
+    max-height: 77px;
+}
+
 .navbar-nav{
     flex-direction: row;
     align-items: center;
@@ -258,6 +364,9 @@ h4{
         padding: 0;
     }
     .price-card{
+        font-size: 22px;
+    }
+    .promotion-card{
         font-size: 22px;
     }
 }

@@ -17,10 +17,11 @@
           <a class="navbar-brand" href="/">Gamestore</a>
 
           <div class="menu-plateformes">
-            <a href="/pc">PC</a>
-            <a href="/playstation">Playstation</a>
-            <a href="/xbox">Xbox</a>
-            <a href="/nintendo">Nintendo</a>
+            <a href="/allgames" class="me-3"><div class="btn-search"><i class="bi bi-search"></i></div></a>
+            <a class="d-none d-lg-block link-plateforme" href="/pc">PC</a>
+            <a class="d-none d-lg-block link-plateforme" href="/playstation">Playstation</a>
+            <a class="d-none d-lg-block link-plateforme" href="/xbox">Xbox</a>
+            <a class="d-none d-lg-block link-plateforme" href="/nintendo">Nintendo</a>
           </div>
 
           <div>
@@ -37,6 +38,7 @@
                 </a>
                 <ul class ="menu-drop">
                   <li><a class="dropdown-item" data-show="connected" href="/account">Mon espace</a></li>
+                  <li><a class="dropdown-item" data-show="ROLE_ADMIN" href="/admin">Admin</a></li>
                   <li><a class="dropdown-item" data-show="disconnected" href="/signin">Connexion</a></li>
                   <li><button class="dropdown-item" data-show="connected" id="signout-btn">Déconnexion</button></li>
                 </ul>
@@ -54,14 +56,44 @@
 
     <footer class="bg-black text-white text-center footer">
       <div class="row">
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-4">
               <h3 class="text-primary">Nos réseaux</h3>
               <p>Instagram : game_store <br/>
                 Facebook : Gamestore Officiel <br/>
                 Youtube : Gamestore <br/>
               </p>
           </div>
-          <div class="col-12 col-lg-6">
+          <div class="d-none d-lg-block col-12 col-lg-4">
+            <h3 class="text-primary">Nos boutiques</h3>
+            <div class="row text-center">
+              <div class="col-4 mb-2">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <i class="bi bi-geo-alt me-2"></i> Nantes
+                  </div>
+              </div>
+              <div class="col-4 mb-2">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <i class="bi bi-geo-alt me-2"></i> Lille
+                  </div>
+              </div>
+              <div class="col-4 mb-2">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <i class="bi bi-geo-alt me-2"></i> Bordeaux
+                  </div>
+              </div>
+              <div class="col-6 mb-2">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <i class="bi bi-geo-alt me-2"></i> Paris
+                  </div>
+              </div>
+              <div class="col-6 mb-2">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <i class="bi bi-geo-alt me-2"></i> Toulouse
+                  </div>
+              </div>
+          </div>
+        </div>
+          <div class="col-12 col-lg-4">
               <h3 class="text-primary">Nous contacter</h3>
               <p>gamestore@mail.com</p>
           </div>

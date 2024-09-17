@@ -11,7 +11,7 @@ export default class Route {
 /*
 [] -> Tout le monde peut y accéder
 ["disconnected"] -> Réserver aux utilisateurs déconnecté 
-["client"] -> Réserver aux utilisateurs avec le rôle client 
-["admin"] -> Réserver aux utilisateurs avec le rôle admin 
-["admin", "client"] -> Réserver aux utilisateurs avec le rôle client OU admin
+["ROLE_CLIENT"] -> Réserver aux utilisateurs avec le rôle client 
+["ROLE_ADMIN"] -> Réserver aux utilisateurs avec le rôle admin 
+["ROLE_ADMIN", "ROLE_CLIENT"] -> Réserver aux utilisateurs avec le rôle client OU admin
 */

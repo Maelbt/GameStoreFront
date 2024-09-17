@@ -3,14 +3,16 @@
 </div>
 
 <article class="bg-dark text-white">
-  <div class="container">
-    <h2>Bienvenue chez Gamestore !</h2>
-    <p>Gamestore est votre référence en jeux vidéo avec cinq magasins en France : Nantes, Lille, Bordeaux, Paris et Toulouse. Explorez notre vaste sélection de jeux pour toutes les plateformes, des dernières nouveautés aux classiques incontournables.</p>
-    <h3>Comment ça marche ?</h3>
-    <ul>
-      <li><strong>Commandez en ligne :</strong> Sélectionnez vos jeux préférés sur notre site.</li>
-      <li><strong>Paiement et retrait en magasin :</strong> Le paiement et le retrait des jeux se font uniquement dans nos magasins.</li>
-    </ul>
+  <div class="container description py-5">
+    <div class="mx-auto" style="max-width: 800px;">
+      <h2 class="mb-4">Bienvenue chez Gamestore !</h2>
+      <p class="mb-4">Gamestore est votre référence en jeux vidéo avec cinq magasins en France : Nantes, Lille, Bordeaux, Paris et Toulouse. Explorez notre vaste sélection de jeux pour toutes les plateformes, des dernières nouveautés aux classiques incontournables.</p>
+      <h3 class="mb-3">Comment ça marche ?</h3>
+      <ul class="text-left mx-auto">
+        <li><strong>Commandez en ligne :</strong> Sélectionnez vos jeux préférés sur notre site.</li>
+        <li><strong>Paiement et retrait en magasin :</strong> Le paiement et le retrait des jeux se font uniquement dans nos magasins.</li>
+      </ul>
+    </div>
   </div>
 </article>
 
@@ -22,12 +24,7 @@
 <!--Tendances-->
 <article class="bg-dark text-white">
     <div class="container col">
-        <div class="text-center" data-show="admin">
-            <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter un jeu</button>
-        </div>  
-    
       <div class="row row-cols-2 row-cols-lg-3" id="allGames"></div>
-
     </div>
 </article>
 
@@ -36,70 +33,76 @@
       <h2>Promotions ></h2>
   </div>
 </article>
-<!--Précommandes-->
+<!--Promotions-->
 <article class="bg-dark text-white">
-  <div class="container col">
-      <div class="text-center" data-show="admin">
-          <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter un jeu</button>
-      </div>  
-  
+  <div class="container col"> 
     <div class="row row-cols-2 row-cols-lg-3" id="allPromos"></div>
-
   </div>
 </article>
 
 
-<!-- Modal edition -->
+<!-- Modal d’édition -->
 <div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition du jeu</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <label for="NamePhotoInput" class="form-label">Titre</label>
-                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="Minecraft" name="Titre"> 
-                </div>
-                <div class="mb-3">
-                  <label for="PricePhotoInput" class="form-label">Prix</label>
-                  <input type="text" class="form-control" id="PricePhotoInput" placeholder="19,99€" name="Prix"> 
-                </div>
-                <div class="mb-3">
-                  <label for="ImageInput" class="form-label">Image</label>
-                  <input type="file" class="form-control" id="ImageInput"  name="Image">
-                </div>
-                <div class="text-center">
-                    <button type="button" class="btn btn-primary text-white">Enregistrer</button>
-                </div>
-            </form>
-        </div>
+          <div class="modal-header">
+              <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Édition du jeu</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="editGameForm">
+                  <input type="hidden" id="editGameId">
+                  <div class="mb-3">
+                      <label for="editName" class="form-label">Titre</label>
+                      <input type="text" class="form-control" id="editName" placeholder="Minecraft"> 
+                  </div>
+                  <div class="mb-3">
+                      <label for="editPrice" class="form-label">Prix</label>
+                      <input type="text" class="form-control" id="editPrice" placeholder="19.99"> 
+                  </div>
+                  <div class="mb-3">
+                      <label for="editDescription" class="form-label">Description</label>
+                      <textarea class="form-control" id="editDescription" placeholder="Description du jeu"></textarea>
+                  </div>
+                  <div class="mb-3">
+                      <label for="editGenre" class="form-label">Genre</label>
+                      <input type="text" class="form-control" id="editGenre" placeholder="RPG, Action">
+                  </div>
+                  <div class="mb-3">
+                      <label for="editPlateforme" class="form-label">Plateforme</label>
+                      <input type="text" class="form-control" id="editPlateforme" placeholder="Playstation, PC">
+                  </div>
+                  <div class="mb-3">
+                      <label for="editReleaseDate" class="form-label">Date de sortie</label>
+                      <input type="date" class="form-control" id="editReleaseDate">
+                  </div>
+                  <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Enregistrer</button>
+                  </div>
+              </form>
+          </div>
       </div>
-    </div>
   </div>
+</div>
 
-  <!-- Modal suppression -->
+<!-- Modal de suppression -->
 <div class="modal fade" id="DeletePhotoModal" tabindex="-1" aria-labelledby="DeletePhotoModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Etes-vous sûr de vouloir supprimer ce jeu ?</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <p>Monster Hunter Wilds</p>
-                  <img src="../images/FondHeroScene.jpg" class="rounded w-100"/>
-                </div>
-                <div class="text-center">
-                    <button type="button" class="btn btn-danger">Supprimer</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                </div>
-            </form>
-        </div>
+          <div class="modal-header">
+              <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Êtes-vous sûr de vouloir supprimer ce jeu ?</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="deleteGameForm">
+                  <input type="hidden" id="deleteGameId">
+                  <p id="deleteGameName">Nom du jeu</p>
+                  <div class="text-center">
+                      <button type="button" id="confirmDelete" class="btn btn-danger">Supprimer</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                  </div>
+              </form>
+          </div>
       </div>
-    </div>
   </div>
+</div>

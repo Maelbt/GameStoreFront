@@ -7,7 +7,7 @@ export const allRoutes = [
     new Route("/signup", "Inscription", "/pages/auth/signup.html", ["disconnected"], "/js/auth/signup.js"),
     new Route("/account", "Mon compte", "/pages/auth/account.html", ["ROLE_CLIENT", "ROLE_ADMIN", "ROLE_EMPLOYE"], "/js/auth/account.js"),
     new Route("/editPassword", "Changement de mot de passe", "/pages/auth/editPassword.html", ["ROLE_CLIENT", "ROLE_ADMIN", "ROLE_EMPLOYE"]),
-    new Route("/panier", "Mon panier", "/pages/panier.html", ["ROLE_CLIENT", "ROLE_ADMIN"]),
+    new Route("/panier", "Mon panier", "/pages/panier.html", ["ROLE_CLIENT", "ROLE_ADMIN"], "/js/panier.js"),
     new Route("/admin", "Admin", "/pages/admin.html", ["ROLE_ADMIN", "ROLE_EMPLOYE"], "/js/admin.js"),
     new Route("/game", "Jeu", "/pages/game.html", [], "/js/game.js"),
     new Route("/allgames", "Recherche", "/pages/allgames.html", [], "/js/allgames.js"),

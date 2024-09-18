@@ -63,17 +63,20 @@ function CreationJeu(){
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    let genre = dataForm.get("Genre").split(",")
+    let plateforme = dataForm.get("Plateforme").split(",")
     let raw = JSON.stringify({
       "name": dataForm.get("Nom"),
       "description": dataForm.get("Description"),
-      "pegi": dataForm.get("Pegi"),
-      "genre": dataForm.get("Genre"),
-      "plateforme": dataForm.get("Plateforme"),
-      "price": dataForm.get("Prix"),
-      "promotion": dataForm.get("Promotion"),
-      "quantity": dataForm.get("Quantité"),
+      "pegi": Number(dataForm.get("Pegi")),
+      "genre": genre,
+      "plateforme": plateforme,
+      "price": Number(dataForm.get("Prix")),
+      "promotion": Number(dataForm.get("Promotion")),
+      "quantity": Number(dataForm.get("Quantité")),
       "releaseDate": dataForm.get("DateDeSortie")
     });
+    console.log(raw);
 
     let requestOptions = {
       method: 'POST',

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" data-show="ROLE_ADMIN">
     <div class="row">
       <div class="col-12 col-lg-6 signin-form">
         <h4>Créer un jeu</h4></br>
@@ -46,8 +46,38 @@
   </div>
 
 
-  <div class="col-12 col-lg-6">
-    <!-- Ici création compte employé -->
-  </div>
-  </div>
-  </div>
+
+  <div class="col-12 col-lg-6 signin-form">
+      <h4>Créer un compte employé</h4></br>
+    <form id="formulaireInscription">
+        <div class="mb-3">
+          <label for="EmailInput" class="form-label">Email</label>
+          <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="Email">
+          <div class="invalid-feedback">
+            Le mail n'est pas au bon format.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="PasswordInput" class="form-label">Mot de passe</label>
+          <input type="password" class="form-control" id="PasswordInput" name="mdp">
+          <div class="invalid-feedback">
+            Le mot de passe n'est pas assez fort : au moins 8 caractères, comprenant au moins une lettre majuscule, une minuscule, un chiffre et un caractère spécial.
+          </div>
+          <div class="valid-feedback">
+            Le mot de passe est valide.
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="ValidatePasswordInput" class="form-label">Confirmez le mot de passe</label>
+            <input type="password" class="form-control" id="ValidatePasswordInput" name="PasswordConfirm">
+            <div class="invalid-feedback">
+                La confirmation n'est pas identique au mot de passe.
+            </div>
+          </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary text-white" id="btn-validation-inscription">Créer le compte</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>

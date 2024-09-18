@@ -1,25 +1,31 @@
 <div class="container">
-    <div class="row">
+  <div class="row">
       <div class="col-12 col-lg-8 panier">
-        <h4>Panier</h4>
-        <div class="achats">
-          <h4>Votre panier est vide</h4></br>
-          <p>Vous n'avez pas encore ajouté de jeux dans votre panier.</p>
-          <a href="/allgames" class="button button-secondary">Découvrir des jeux</a>
-        </div>
+          <h4>Panier</h4>
+          <div id="achats-panier"></div>
       </div>
 
       <div class="d-none d-lg-block col-12 col-lg-4 panier-resume">
-        <h4>Résumé</h4>
-        <div class="resume">
-          <p>Prix officiel</p>
-          <p>Réductions</p>
-          <h4>Sous-total</h4>
-          <div class="resume-button">
-          <button type="button" class="btn btn-primary text-white" href="#">Commander</button>
+          <h4>Résumé</h4>
+          <div class="resume">
+            <div>
+            <div class="d-flex justify-content-between">
+              <p>Prix officiel :</p>
+              <p id="official-price"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p>Réductions :</p>
+              <p id="discounts"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h4>Sous-total :</h4>
+              <h4 id="subtotal"></h4>
+            </div>
+            </div>
+              <div class="resume-button">
+                  <button type="button" class="btn btn-primary text-white" onclick="checkout()">Commander</button>
+              </div>
           </div>
-        </div>
       </div>
-
-    </div>
+  </div>
 </div>

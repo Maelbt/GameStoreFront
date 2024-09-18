@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
+
     // Gérer la suppression du compte
     deleteButton.addEventListener('click', async () => {
         if (confirm('Êtes-vous sûr de vouloir supprimer votre compte ?')) {
@@ -72,3 +73,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
+
+async function initAccount() {
+    const response = await fetch(apiUrl + 'account/me');
+    console.log(response);
+}
+
+initAccount();
